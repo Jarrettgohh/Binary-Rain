@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <body onload="functions()">
+    <p id="test"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+
+    <canvas
+      id="myCanvas"
+      style="
+        width: 1000px;
+        height: 1000px;
+        background-color: black;
+        display: block;
+      "
+    ></canvas>
+  </body>
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    function functions() {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+
+      var x_array = [];
+      var y_array = [];
+      var letters = [
+        "H",
+        "e",
+        "l",
+        "l",
+        "o",
+        "U",
+        "s",
+        "e",
+        "r",
+        "M",
+        "y",
+        "N",
+        "a",
+        "m",
+        "e",
+      ];
+      var x_coordinate = 50; //x coordinate of first letter
+      var y_coordinate = 50; //y coordinate of first letter
+      var x_shift = 0; //To allow space between words in sentence
+      var font_size = 20; //To allow proper spacing between words
+
+      for (
+        i = 0;
+        i < letters.length;
+        i++ //To set and align the value of x and y coordinates of string
+      ) {
+        y_array[i] = y_coordinate;
+
+        if (letters[i] == letters[i].toUpperCase()) {
+          //If letter is uppercase which means first letter of new word, then skip extra space
+
+          x_shift += font_size * 2;
+          x_array[i] = x_coordinate + x_shift;
+        } else {
+          //Else skip only one font_size
+          x_shift += font_size;
+          x_array[i] = x_coordinate + x_shift;
+        }
+      }
+
+      for (i = 0; i < letters.length; i++) {
+        var x_axis = x_array[i];
+        var y_axis = y_array[i];
+
+        ctx.fillStyle = "green";
+        ctx.font = font_size + "px Arial";
+        ctx.fillText(letters[i], x_axis, y_axis);
+      }
+
+      document.getElementById("test").innerHTML = x_array;
+    }
+  </script>
+</html>

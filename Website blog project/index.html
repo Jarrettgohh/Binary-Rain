@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is a forum website about Physics, Coding and Game making"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Forum, Physics, Coding, Game making" />
+    <meta name="author" content="Jarrett Goh Xiang Zheng" />
+
+    <title>Jarrett's Website</title>
+
+    <link rel="shortcut icon" href="Binary.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="start()">
+    <div id="canvas-wrap">
+      <canvas id="canvas"> </canvas>
+      <div id="overlay" class="over_lay">
+        <p class="cool_text" id="cooltext"
+          >Click anywhere on the black space to see a cool effect!</p
+        >
+      </div>
+    </div>
+
+    <div id="stick" class="sticking">
+      <div class="Heading" id="myHeader">
+        <p
+          style="
+            position: absolute;
+            left: 200px;
+            top: 16px;
+            font-size: 60px;
+            font-family: 'Times New Roman';
+            color: white;
+            margin: 0;
+          "
+          >Jarrett</p
+        >
+
+        <button type="button" class="btn btn-outline-warning btn-outline"
+          >Button</button
+        >
+
+        <div class="dropbtn" onclick="menu_dropdown_and_animation(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+
+      <div class="dropdown-content" id="myDropdown">
+        <a href="index_Physics.html" style="font-size: 16px;">Physics page</a>
+        <a href="index_Game.html" style="font-size: 16px;">Game Making page</a>
+        <a href="index_Coding.html" style="font-size: 16px;">Coding Page</a>
+        <a href="index_2.html" style="font-size: 16px;">index_2.html</a>
+      </div>
+    </div>
+
+    <div class="content" id="contents">
+      <div class="broadcast" id="broadcast_message">
+        <p style="font-size: 40px; color: black; text-align: center;"
+          >Broadcast message here!</p
+        >
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="binary.js"></script>
+    <script src="sticky_header.js"></script>
+    <script src="menu_dropdown_and_animation.js"></script>
+  </body>
+</html>
