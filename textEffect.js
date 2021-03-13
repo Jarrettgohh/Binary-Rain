@@ -4,8 +4,8 @@ function textEffect() {
   var canvas = document.getElementById("canvas_text");
   var ctx = canvas.getContext("2d");
 
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth / 2;
+  canvas.height = window.innerHeight / 2;
+  canvas.width = window.innerWidth;
 
   var x_array = [];
   var y_array = [];

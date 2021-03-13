@@ -27,8 +27,8 @@ function binary() {
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
 
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth / 4;
+  canvas.height = window.innerHeight / 2;
+  canvas.width = window.innerWidth;
 
   var binary = "01";
   binary = binary.split(""); //To make the binary variable into a list? And splits the string by every character (To form '1' and '0')
