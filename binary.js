@@ -36,7 +36,6 @@ function binary() {
   var font_size = 30;
   var columns = canvas.width / font_size;
   var drops = [];
-  var count = 0;
 
   for (var x = 0; x < columns; x++) {
     //To establish the drops.length?
@@ -51,7 +50,6 @@ function binary() {
     ctx.fillStyle = fillStyle;
     ctx.font = font_size + "px Arial"; // Sets the font option
 
-    // if (count < user_greetings_time) {
     for (var i = 0; i < drops.length; i++) {
       var text = binary[Math.floor(Math.random() * binary.length)];
 
@@ -62,7 +60,6 @@ function binary() {
       }
 
       drops[i]++;
-      count++;
     }
   }
   setInterval(draw, 120);
